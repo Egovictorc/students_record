@@ -1,16 +1,28 @@
 package controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 public class Controller {
-    @FXML private ChoiceBox choiceBox;
+    @FXML
+    private TextField firstName,
+            lastName,
+            city;
+
+    @FXML private Slider age;
+    @FXML private DatePicker dob;
 
 
     public void initialize() {
-    choiceBox.getItems().addAll("item 1", "item 2", "item 3");
-        System.out.println();
+
     }
 
+    @FXML
+    public void onMouseClicked(MouseEvent e) {
+        Button btn = (Button)e.getSource();
+
+        System.out.println("event fired");
+    }
 
 }
