@@ -37,13 +37,13 @@
    <center>
       <TableView fx:id="table" prefHeight="183.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="44.000030517578125" text="Sn" />
-          <TableColumn prefWidth="90.4000244140625" text="First Name" />
-            <TableColumn prefWidth="100.79998779296875" text="Last Name" />
-            <TableColumn prefWidth="92.79998779296875" text="City" />
-            <TableColumn prefWidth="50.4000244140625" text="Age" />
-            <TableColumn prefWidth="132.00006103515625" text="DOB" />
-            <TableColumn prefWidth="86.39996337890625" text="Gender" />
+          <TableColumn fx:id="sn" prefWidth="44.000030517578125" text="Sn" />
+          <TableColumn fx:id="firstName" prefWidth="90.4000244140625" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="100.79998779296875" text="Last Name" />
+            <TableColumn fx:id="city" prefWidth="92.79998779296875" text="City" />
+            <TableColumn fx:id="age" prefWidth="50.4000244140625" text="Age" />
+            <TableColumn fx:id="dob" prefWidth="132.00006103515625" text="DOB" />
+            <TableColumn fx:id="gender" prefWidth="86.39996337890625" text="Gender" />
         </columns>
       </TableView>
    </center>
