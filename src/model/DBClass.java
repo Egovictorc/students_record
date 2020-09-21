@@ -3,18 +3,18 @@ package model;
 import java.sql.*;
 
 public class DBClass {
-    private final String CONNECTION_STRING ="jdbc:mysql://localhost:3306/school?serverTimezone=UTC",
-    SERVERNAME = "root",
-    PASSWORD = "root";
+    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/school?serverTimezone=UTC",
+            SERVERNAME = "root",
+            PASSWORD = "root";
 
-    Connection conn;
+    static Connection conn;
 
-    public void createConnection() {
-    try {
-        conn = DriverManager.getConnection(CONNECTION_STRING, SERVERNAME, PASSWORD);
-    } catch (SQLException e) {
-        System.out.println("error connection to database: "+ e.getMessage());
-    }
+    public static void createConnection() {
+        try {
+            conn = DriverManager.getConnection(CONNECTION_STRING, SERVERNAME, PASSWORD);
+        } catch (SQLException e) {
+            System.out.println("error connection to database: " + e.getMessage());
+        }
     }
 
     public ResultSet queryDB() throws SQLException {

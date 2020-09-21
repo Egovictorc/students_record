@@ -21,6 +21,25 @@ import java.sql.SQLException;
 
 public class Main extends Application {
 
+    public void connectDb() throws SQLException {
+        //Test database connection
+        //instantiate the database class
+        DBClass dbClass = new DBClass();
+        //connect to database
+        DBClass.createConnection();
+    /*    ResultSet rs = null;
+        try {
+            rs = dbClass.queryDB();
+        } catch (SQLException e) {
+            System.out.println("error querying db: " + e.getMessage());
+        }
+        while (rs.next()) {
+            System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
+        }
+    */
+    }
+
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view/main.fxml"));
@@ -30,20 +49,8 @@ public class Main extends Application {
         primaryStage.setTitle("NIIT Java Project");
         primaryStage.show();
 
-        //instantiate the database class
-        DBClass dbClass = new DBClass();
-
-        //connect to database
-        dbClass.createConnection();
-        ResultSet rs = null;
-        try {
-            rs = dbClass.queryDB();
-        } catch (SQLException e) {
-            System.out.println("error querying db: " + e.getMessage());
-        }
-        while (rs.next()) {
-            System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
-        }
+        // call method to connect database connection
+        connectDb();
     }
 
 
